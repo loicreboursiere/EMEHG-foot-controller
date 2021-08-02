@@ -1,0 +1,341 @@
+\hypertarget{defines_8h}{}\doxysection{C\+:/\+Users/\+Pierre Paque/\+Documents/\+Arduino/\+U\+Mons\+\_\+arduino\+\_\+custom/defines.h File Reference}
+\label{defines_8h}\index{C:/Users/Pierre Paque/Documents/Arduino/UMons\_arduino\_custom/defines.h@{C:/Users/Pierre Paque/Documents/Arduino/UMons\_arduino\_custom/defines.h}}
+
+
+Contains all \#define of the project.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{defines_8h_aa626e6d5a3900b578e261059f9c4c28d}{D\+E\+F\+I\+N\+ES}}
+\item 
+\#define \mbox{\hyperlink{defines_8h_acf98868169377646ee8a5abcd0e347b9}{T\+E\+E\+N\+S\+Y\+\_\+\+A\+D\+DR}}~4
+\begin{DoxyCompactList}\small\item\em i2c address of the Teensy on the bus \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a9beb1ec882aee5bd21bbdaca183a627f}{F\+S\+W\+\_\+\+C\+T\+R\+L\+\_\+\+A\+D\+DR}}~8
+\begin{DoxyCompactList}\small\item\em i2c address of the Arduino Custom on the bus \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a200245ead80051e15deb0077c77cd6e8}{M\+E\+M\+\_\+\+A\+D\+DR}}~0x50
+\begin{DoxyCompactList}\small\item\em i2c address of the Memory Chip on the bus \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_aec1d3cda83d76b263d21293132d8c067}{C\+L\+K1\+\_\+\+SR}}~5
+\begin{DoxyCompactList}\small\item\em Clock Pin of the {\bfseries{first}} chain of shift register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_aec1d3cda83d76b263d21293132d8c067}{C\+L\+K1\+\_\+\+SR}}~5
+\begin{DoxyCompactList}\small\item\em Clock Pin of the {\bfseries{first}} chain of shift register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_ad42a534651c87f78284bd4a7be788aa3}{L\+A\+T1\+\_\+\+SR}}~4
+\begin{DoxyCompactList}\small\item\em Latch Pin of the {\bfseries{first}} chain of shift register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a5b101380a65d68930311ac9b6a25c08c}{D\+A\+T1\+\_\+\+SR}}~3
+\begin{DoxyCompactList}\small\item\em Data Pin of the {\bfseries{first}} chain of shift register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_adedf9db17861c106739670469909de48}{C\+L\+K2\+\_\+\+SR}}~8
+\begin{DoxyCompactList}\small\item\em Clock Pin of the {\bfseries{second}} chain of shift register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_abd9372c755e3f6c073fc960b749e2baf}{L\+A\+T2\+\_\+\+SR}}~7
+\begin{DoxyCompactList}\small\item\em Latch Pin of the {\bfseries{second}} chain of shift register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_ad9f95aa1e73afd5346912ba79f7c5f89}{D\+A\+T2\+\_\+\+SR}}~6
+\begin{DoxyCompactList}\small\item\em Data Pin of the {\bfseries{second}} chain of shift register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_aa902ebc8857625f774de6e2e79782cef}{R\+G\+B\+\_\+\+C\+H1}}~A1
+\begin{DoxyCompactList}\small\item\em Data Pin of the {\bfseries{first}} R\+GB W\+S2811 (Neopixel) L\+ED chain. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a5bc862c458b8a7da82e4bfe089e5efa1}{R\+G\+B\+\_\+\+C\+H2}}~A2
+\begin{DoxyCompactList}\small\item\em Data Pin of the {\bfseries{second}} R\+GB W\+S2811 (Neopixel) L\+ED chain. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a81eb8a7380d7bc008c8ba0e4ccd01fd0}{D\+B\+G\+\_\+\+L\+ED}}~9
+\begin{DoxyCompactList}\small\item\em debug L\+ED Pin \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_aba8383777fb42190a6d8951b5bf906fb}{I\+S\+R\+\_\+\+P\+IN}}~2
+\begin{DoxyCompactList}\small\item\em return signal interrupt pin \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a860f9fe6516fbde7044312b5f2f77b10}{M\+E\+M\+\_\+\+WP}}~10
+\begin{DoxyCompactList}\small\item\em i2c memory write protection pin \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a057210c11a25e4660010ef326fb39c65}{I2\+C\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT}}~150
+\item 
+\#define \mbox{\hyperlink{defines_8h_adde42b4b6f43968bf3ba795ef29fe367}{M\+E\+M\+\_\+\+B\+L\+O\+CK}}~32
+\begin{DoxyCompactList}\small\item\em each switch will have a n bytes memory block allocated. to get an idea of the ranges, the mem chip 24L\+C256 has 32K byte of memory. e.\+g. 1000 blocks of 32bytes \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a833549b87c918a591e597e975e33e330}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+IN}}~2
+\begin{DoxyCompactList}\small\item\em set the number of shift register chains \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_afa4b6accc29cf2a353e70ce3dc418418}{C\+H1\+\_\+\+N\+B\+\_\+\+E\+LT}}~7
+\begin{DoxyCompactList}\small\item\em number of elements in the {\bfseries{first}} Shift Register chain \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a255fb9f1c041de92a1a0f2bd42d52cb3}{C\+H2\+\_\+\+E\+N\+A\+B\+LE}}~false
+\begin{DoxyCompactList}\small\item\em enable the {\bfseries{second}} Shift Register chain \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a34fff870138972807490bb78081c1059}{C\+H2\+\_\+\+N\+B\+\_\+\+E\+LT}}~0
+\begin{DoxyCompactList}\small\item\em number of elements in the {\bfseries{second}} Shift Register chain \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a9b0694db1c384bffec785e77f748903e}{R\+G\+B\+\_\+\+C\+H1\+\_\+\+NB}}~49
+\begin{DoxyCompactList}\small\item\em Number of R\+GB W\+S2811 (Neopixel) L\+ED in the {\bfseries{first}} chain .max 255 change the \mbox{\hyperlink{class_switch}{Switch}} class with index as an int instead of a byte to get (2$^\wedge$16)-\/1 led. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a6d22c6a2ae5ddc72442ef4f7ef287e8d}{R\+G\+B\+\_\+\+C\+H2\+\_\+\+E\+N\+A\+B\+LE}}~false
+\begin{DoxyCompactList}\small\item\em enable the {\bfseries{second}} R\+GB W\+S2811 (Neopixel) L\+ED chain \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a7b869d732ea74c45bdaf70400209e95f}{R\+G\+B\+\_\+\+C\+H2\+\_\+\+NB}}~0
+\begin{DoxyCompactList}\small\item\em Number of R\+GB W\+S2811 (Neopixel) L\+ED in the {\bfseries{second}} chain .max 255 change the \mbox{\hyperlink{class_switch}{Switch}} class with index as an int instead of a byte to get (2$^\wedge$16)-\/1 led. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_ab37f59b6ee495819b3033ff41693b0d7}{B\+L\+I\+N\+K\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+D\+BG}}~100
+\begin{DoxyCompactList}\small\item\em blink period in ms for debug L\+ED blinking \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all \#define of the project. 
+
+~\newline
+ \begin{DoxyAuthor}{Author}
+Pierre Paque I\+S\+EN (P\+R\+OM. 62) Lille France. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+June\+\_\+2020 
+\end{DoxyVersion}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{defines_8h_ab37f59b6ee495819b3033ff41693b0d7}\label{defines_8h_ab37f59b6ee495819b3033ff41693b0d7}} 
+\index{defines.h@{defines.h}!BLINK\_DELAY\_DBG@{BLINK\_DELAY\_DBG}}
+\index{BLINK\_DELAY\_DBG@{BLINK\_DELAY\_DBG}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{BLINK\_DELAY\_DBG}{BLINK\_DELAY\_DBG}}
+{\footnotesize\ttfamily \#define B\+L\+I\+N\+K\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+D\+BG~100}
+
+
+
+blink period in ms for debug L\+ED blinking 
+
+\mbox{\Hypertarget{defines_8h_afa4b6accc29cf2a353e70ce3dc418418}\label{defines_8h_afa4b6accc29cf2a353e70ce3dc418418}} 
+\index{defines.h@{defines.h}!CH1\_NB\_ELT@{CH1\_NB\_ELT}}
+\index{CH1\_NB\_ELT@{CH1\_NB\_ELT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CH1\_NB\_ELT}{CH1\_NB\_ELT}}
+{\footnotesize\ttfamily \#define C\+H1\+\_\+\+N\+B\+\_\+\+E\+LT~7}
+
+
+
+number of elements in the {\bfseries{first}} Shift Register chain 
+
+\mbox{\Hypertarget{defines_8h_a255fb9f1c041de92a1a0f2bd42d52cb3}\label{defines_8h_a255fb9f1c041de92a1a0f2bd42d52cb3}} 
+\index{defines.h@{defines.h}!CH2\_ENABLE@{CH2\_ENABLE}}
+\index{CH2\_ENABLE@{CH2\_ENABLE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CH2\_ENABLE}{CH2\_ENABLE}}
+{\footnotesize\ttfamily \#define C\+H2\+\_\+\+E\+N\+A\+B\+LE~false}
+
+
+
+enable the {\bfseries{second}} Shift Register chain 
+
+\mbox{\Hypertarget{defines_8h_a34fff870138972807490bb78081c1059}\label{defines_8h_a34fff870138972807490bb78081c1059}} 
+\index{defines.h@{defines.h}!CH2\_NB\_ELT@{CH2\_NB\_ELT}}
+\index{CH2\_NB\_ELT@{CH2\_NB\_ELT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CH2\_NB\_ELT}{CH2\_NB\_ELT}}
+{\footnotesize\ttfamily \#define C\+H2\+\_\+\+N\+B\+\_\+\+E\+LT~0}
+
+
+
+number of elements in the {\bfseries{second}} Shift Register chain 
+
+\mbox{\Hypertarget{defines_8h_aec1d3cda83d76b263d21293132d8c067}\label{defines_8h_aec1d3cda83d76b263d21293132d8c067}} 
+\index{defines.h@{defines.h}!CLK1\_SR@{CLK1\_SR}}
+\index{CLK1\_SR@{CLK1\_SR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CLK1\_SR}{CLK1\_SR}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define C\+L\+K1\+\_\+\+SR~5}
+
+
+
+Clock Pin of the {\bfseries{first}} chain of shift register. 
+
+\begin{DoxyWarning}{Warning}
+if you want to change something here, be aware that clock and latch are inverted on the P\+CB labelling 
+\end{DoxyWarning}
+\mbox{\Hypertarget{defines_8h_aec1d3cda83d76b263d21293132d8c067}\label{defines_8h_aec1d3cda83d76b263d21293132d8c067}} 
+\index{defines.h@{defines.h}!CLK1\_SR@{CLK1\_SR}}
+\index{CLK1\_SR@{CLK1\_SR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CLK1\_SR}{CLK1\_SR}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define C\+L\+K1\+\_\+\+SR~5}
+
+
+
+Clock Pin of the {\bfseries{first}} chain of shift register. 
+
+\begin{DoxyWarning}{Warning}
+if you want to change something here, be aware that clock and latch are inverted on the P\+CB labelling 
+\end{DoxyWarning}
+\mbox{\Hypertarget{defines_8h_adedf9db17861c106739670469909de48}\label{defines_8h_adedf9db17861c106739670469909de48}} 
+\index{defines.h@{defines.h}!CLK2\_SR@{CLK2\_SR}}
+\index{CLK2\_SR@{CLK2\_SR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{CLK2\_SR}{CLK2\_SR}}
+{\footnotesize\ttfamily \#define C\+L\+K2\+\_\+\+SR~8}
+
+
+
+Clock Pin of the {\bfseries{second}} chain of shift register. 
+
+\begin{DoxyWarning}{Warning}
+if you want to change something here, be aware that clock and latch are inverted on the P\+CB labelling 
+\end{DoxyWarning}
+\mbox{\Hypertarget{defines_8h_a5b101380a65d68930311ac9b6a25c08c}\label{defines_8h_a5b101380a65d68930311ac9b6a25c08c}} 
+\index{defines.h@{defines.h}!DAT1\_SR@{DAT1\_SR}}
+\index{DAT1\_SR@{DAT1\_SR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{DAT1\_SR}{DAT1\_SR}}
+{\footnotesize\ttfamily \#define D\+A\+T1\+\_\+\+SR~3}
+
+
+
+Data Pin of the {\bfseries{first}} chain of shift register. 
+
+\mbox{\Hypertarget{defines_8h_ad9f95aa1e73afd5346912ba79f7c5f89}\label{defines_8h_ad9f95aa1e73afd5346912ba79f7c5f89}} 
+\index{defines.h@{defines.h}!DAT2\_SR@{DAT2\_SR}}
+\index{DAT2\_SR@{DAT2\_SR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{DAT2\_SR}{DAT2\_SR}}
+{\footnotesize\ttfamily \#define D\+A\+T2\+\_\+\+SR~6}
+
+
+
+Data Pin of the {\bfseries{second}} chain of shift register. 
+
+\mbox{\Hypertarget{defines_8h_a81eb8a7380d7bc008c8ba0e4ccd01fd0}\label{defines_8h_a81eb8a7380d7bc008c8ba0e4ccd01fd0}} 
+\index{defines.h@{defines.h}!DBG\_LED@{DBG\_LED}}
+\index{DBG\_LED@{DBG\_LED}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{DBG\_LED}{DBG\_LED}}
+{\footnotesize\ttfamily \#define D\+B\+G\+\_\+\+L\+ED~9}
+
+
+
+debug L\+ED Pin 
+
+\mbox{\Hypertarget{defines_8h_aa626e6d5a3900b578e261059f9c4c28d}\label{defines_8h_aa626e6d5a3900b578e261059f9c4c28d}} 
+\index{defines.h@{defines.h}!DEFINES@{DEFINES}}
+\index{DEFINES@{DEFINES}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{DEFINES}{DEFINES}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+ES}
+
+\mbox{\Hypertarget{defines_8h_a9beb1ec882aee5bd21bbdaca183a627f}\label{defines_8h_a9beb1ec882aee5bd21bbdaca183a627f}} 
+\index{defines.h@{defines.h}!FSW\_CTRL\_ADDR@{FSW\_CTRL\_ADDR}}
+\index{FSW\_CTRL\_ADDR@{FSW\_CTRL\_ADDR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{FSW\_CTRL\_ADDR}{FSW\_CTRL\_ADDR}}
+{\footnotesize\ttfamily \#define F\+S\+W\+\_\+\+C\+T\+R\+L\+\_\+\+A\+D\+DR~8}
+
+
+
+i2c address of the Arduino Custom on the bus 
+
+\begin{DoxyWarning}{Warning}
+do not use if Arduino is bus master 
+\end{DoxyWarning}
+\mbox{\Hypertarget{defines_8h_a057210c11a25e4660010ef326fb39c65}\label{defines_8h_a057210c11a25e4660010ef326fb39c65}} 
+\index{defines.h@{defines.h}!I2C\_TIME\_OUT@{I2C\_TIME\_OUT}}
+\index{I2C\_TIME\_OUT@{I2C\_TIME\_OUT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_TIME\_OUT}{I2C\_TIME\_OUT}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+T\+I\+M\+E\+\_\+\+O\+UT~150}
+
+\mbox{\Hypertarget{defines_8h_aba8383777fb42190a6d8951b5bf906fb}\label{defines_8h_aba8383777fb42190a6d8951b5bf906fb}} 
+\index{defines.h@{defines.h}!ISR\_PIN@{ISR\_PIN}}
+\index{ISR\_PIN@{ISR\_PIN}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{ISR\_PIN}{ISR\_PIN}}
+{\footnotesize\ttfamily \#define I\+S\+R\+\_\+\+P\+IN~2}
+
+
+
+return signal interrupt pin 
+
+\mbox{\Hypertarget{defines_8h_ad42a534651c87f78284bd4a7be788aa3}\label{defines_8h_ad42a534651c87f78284bd4a7be788aa3}} 
+\index{defines.h@{defines.h}!LAT1\_SR@{LAT1\_SR}}
+\index{LAT1\_SR@{LAT1\_SR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{LAT1\_SR}{LAT1\_SR}}
+{\footnotesize\ttfamily \#define L\+A\+T1\+\_\+\+SR~4}
+
+
+
+Latch Pin of the {\bfseries{first}} chain of shift register. 
+
+\mbox{\Hypertarget{defines_8h_abd9372c755e3f6c073fc960b749e2baf}\label{defines_8h_abd9372c755e3f6c073fc960b749e2baf}} 
+\index{defines.h@{defines.h}!LAT2\_SR@{LAT2\_SR}}
+\index{LAT2\_SR@{LAT2\_SR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{LAT2\_SR}{LAT2\_SR}}
+{\footnotesize\ttfamily \#define L\+A\+T2\+\_\+\+SR~7}
+
+
+
+Latch Pin of the {\bfseries{second}} chain of shift register. 
+
+\mbox{\Hypertarget{defines_8h_a200245ead80051e15deb0077c77cd6e8}\label{defines_8h_a200245ead80051e15deb0077c77cd6e8}} 
+\index{defines.h@{defines.h}!MEM\_ADDR@{MEM\_ADDR}}
+\index{MEM\_ADDR@{MEM\_ADDR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_ADDR}{MEM\_ADDR}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+A\+D\+DR~0x50}
+
+
+
+i2c address of the Memory Chip on the bus 
+
+\mbox{\Hypertarget{defines_8h_adde42b4b6f43968bf3ba795ef29fe367}\label{defines_8h_adde42b4b6f43968bf3ba795ef29fe367}} 
+\index{defines.h@{defines.h}!MEM\_BLOCK@{MEM\_BLOCK}}
+\index{MEM\_BLOCK@{MEM\_BLOCK}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_BLOCK}{MEM\_BLOCK}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+B\+L\+O\+CK~32}
+
+
+
+each switch will have a n bytes memory block allocated. to get an idea of the ranges, the mem chip 24L\+C256 has 32K byte of memory. e.\+g. 1000 blocks of 32bytes 
+
+\mbox{\Hypertarget{defines_8h_a860f9fe6516fbde7044312b5f2f77b10}\label{defines_8h_a860f9fe6516fbde7044312b5f2f77b10}} 
+\index{defines.h@{defines.h}!MEM\_WP@{MEM\_WP}}
+\index{MEM\_WP@{MEM\_WP}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_WP}{MEM\_WP}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+WP~10}
+
+
+
+i2c memory write protection pin 
+
+\mbox{\Hypertarget{defines_8h_a833549b87c918a591e597e975e33e330}\label{defines_8h_a833549b87c918a591e597e975e33e330}} 
+\index{defines.h@{defines.h}!NUMBER\_OF\_CHAIN@{NUMBER\_OF\_CHAIN}}
+\index{NUMBER\_OF\_CHAIN@{NUMBER\_OF\_CHAIN}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_CHAIN}{NUMBER\_OF\_CHAIN}}
+{\footnotesize\ttfamily \#define N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+IN~2}
+
+
+
+set the number of shift register chains 
+
+\mbox{\Hypertarget{defines_8h_aa902ebc8857625f774de6e2e79782cef}\label{defines_8h_aa902ebc8857625f774de6e2e79782cef}} 
+\index{defines.h@{defines.h}!RGB\_CH1@{RGB\_CH1}}
+\index{RGB\_CH1@{RGB\_CH1}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{RGB\_CH1}{RGB\_CH1}}
+{\footnotesize\ttfamily \#define R\+G\+B\+\_\+\+C\+H1~A1}
+
+
+
+Data Pin of the {\bfseries{first}} R\+GB W\+S2811 (Neopixel) L\+ED chain. 
+
+\mbox{\Hypertarget{defines_8h_a9b0694db1c384bffec785e77f748903e}\label{defines_8h_a9b0694db1c384bffec785e77f748903e}} 
+\index{defines.h@{defines.h}!RGB\_CH1\_NB@{RGB\_CH1\_NB}}
+\index{RGB\_CH1\_NB@{RGB\_CH1\_NB}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{RGB\_CH1\_NB}{RGB\_CH1\_NB}}
+{\footnotesize\ttfamily \#define R\+G\+B\+\_\+\+C\+H1\+\_\+\+NB~49}
+
+
+
+Number of R\+GB W\+S2811 (Neopixel) L\+ED in the {\bfseries{first}} chain .max 255 change the \mbox{\hyperlink{class_switch}{Switch}} class with index as an int instead of a byte to get (2$^\wedge$16)-\/1 led. 
+
+\mbox{\Hypertarget{defines_8h_a5bc862c458b8a7da82e4bfe089e5efa1}\label{defines_8h_a5bc862c458b8a7da82e4bfe089e5efa1}} 
+\index{defines.h@{defines.h}!RGB\_CH2@{RGB\_CH2}}
+\index{RGB\_CH2@{RGB\_CH2}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{RGB\_CH2}{RGB\_CH2}}
+{\footnotesize\ttfamily \#define R\+G\+B\+\_\+\+C\+H2~A2}
+
+
+
+Data Pin of the {\bfseries{second}} R\+GB W\+S2811 (Neopixel) L\+ED chain. 
+
+\mbox{\Hypertarget{defines_8h_a6d22c6a2ae5ddc72442ef4f7ef287e8d}\label{defines_8h_a6d22c6a2ae5ddc72442ef4f7ef287e8d}} 
+\index{defines.h@{defines.h}!RGB\_CH2\_ENABLE@{RGB\_CH2\_ENABLE}}
+\index{RGB\_CH2\_ENABLE@{RGB\_CH2\_ENABLE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{RGB\_CH2\_ENABLE}{RGB\_CH2\_ENABLE}}
+{\footnotesize\ttfamily \#define R\+G\+B\+\_\+\+C\+H2\+\_\+\+E\+N\+A\+B\+LE~false}
+
+
+
+enable the {\bfseries{second}} R\+GB W\+S2811 (Neopixel) L\+ED chain 
+
+\mbox{\Hypertarget{defines_8h_a7b869d732ea74c45bdaf70400209e95f}\label{defines_8h_a7b869d732ea74c45bdaf70400209e95f}} 
+\index{defines.h@{defines.h}!RGB\_CH2\_NB@{RGB\_CH2\_NB}}
+\index{RGB\_CH2\_NB@{RGB\_CH2\_NB}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{RGB\_CH2\_NB}{RGB\_CH2\_NB}}
+{\footnotesize\ttfamily \#define R\+G\+B\+\_\+\+C\+H2\+\_\+\+NB~0}
+
+
+
+Number of R\+GB W\+S2811 (Neopixel) L\+ED in the {\bfseries{second}} chain .max 255 change the \mbox{\hyperlink{class_switch}{Switch}} class with index as an int instead of a byte to get (2$^\wedge$16)-\/1 led. 
+
+\mbox{\Hypertarget{defines_8h_acf98868169377646ee8a5abcd0e347b9}\label{defines_8h_acf98868169377646ee8a5abcd0e347b9}} 
+\index{defines.h@{defines.h}!TEENSY\_ADDR@{TEENSY\_ADDR}}
+\index{TEENSY\_ADDR@{TEENSY\_ADDR}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{TEENSY\_ADDR}{TEENSY\_ADDR}}
+{\footnotesize\ttfamily \#define T\+E\+E\+N\+S\+Y\+\_\+\+A\+D\+DR~4}
+
+
+
+i2c address of the Teensy on the bus 
+

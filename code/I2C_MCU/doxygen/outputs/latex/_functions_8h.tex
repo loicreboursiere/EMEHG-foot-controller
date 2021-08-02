@@ -1,0 +1,221 @@
+\hypertarget{_functions_8h}{}\doxysection{C\+:/\+Users/\+Pierre Paque/\+Documents/\+Arduino/\+U\+Mons\+\_\+arduino\+\_\+custom/\+Functions.h File Reference}
+\label{_functions_8h}\index{C:/Users/Pierre Paque/Documents/Arduino/UMons\_arduino\_custom/Functions.h@{C:/Users/Pierre Paque/Documents/Arduino/UMons\_arduino\_custom/Functions.h}}
+
+
+Contains all the function prototypes for the \mbox{\hyperlink{_functions_8cpp}{Functions.\+cpp}} file.  
+
+
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Switch.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+Neo\+Pixel.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_functions_8h_a8be69617ea64c242351a1cf3278d1474}{write\+E\+E\+P\+R\+OM}} (int deviceaddress, unsigned int eeaddress, byte data)
+\begin{DoxyCompactList}\small\item\em Writing into the i2c memory chip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_ad9d238d64ab9b6ebfcaae0c8a82770db}{write\+Teensy}} (int btn\+ID, bool btn\+State)
+\item 
+byte \mbox{\hyperlink{_functions_8h_a941e8c41fbc480b7dc46c2054a9513af}{read\+E\+E\+P\+R\+OM}} (int deviceaddress, unsigned int eeaddress)
+\begin{DoxyCompactList}\small\item\em Read from the i2c memory chip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_a125db2763fd413e2bca5005727294259}{update\+F\+S\+Wboard}} (int index, int bank, bool pressed\+ButtonP, \mbox{\hyperlink{class_switch}{Switch}} F\+S\+WP, Adafruit\+\_\+\+Neo\+Pixel chain)
+\begin{DoxyCompactList}\small\item\em check if a switch is pushed \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a29fc023076efbd515a48067de95a5037}{load\+State}} (int index)
+\begin{DoxyCompactList}\small\item\em load state a given switch \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{_functions_8h_ae66b8428977a138506d3c079a1b7b039}{load\+Color}} (int index, int chanel)
+\begin{DoxyCompactList}\small\item\em load color chanel of a given switch \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_aa863de5ae285cdc1d2a3bcc8fb1c1c57}{save\+State}} (int index, bool state)
+\begin{DoxyCompactList}\small\item\em save the state of a given switch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_a0651b9ce25e67a2e14c469eec5eeeed6}{save\+Color}} (int index, int chanel, byte component)
+\item 
+void \mbox{\hyperlink{_functions_8h_aa1ea89eb5ae21a25462adc8f2deb802b}{blink\+Debug\+L\+ED}} ()
+\begin{DoxyCompactList}\small\item\em when called it blinks the debug L\+ED on the board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a615faf85d13d549ae9bb515b4f8f2137}{load\+From\+Teensy}} ()
+\begin{DoxyCompactList}\small\item\em loads presets datas from teensy \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all the function prototypes for the \mbox{\hyperlink{_functions_8cpp}{Functions.\+cpp}} file. 
+
+~\newline
+ \begin{DoxyAuthor}{Author}
+Pierre Paque I\+S\+EN (P\+R\+OM. 62) Lille France. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+June\+\_\+2020 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_functions_8h_aa1ea89eb5ae21a25462adc8f2deb802b}\label{_functions_8h_aa1ea89eb5ae21a25462adc8f2deb802b}} 
+\index{Functions.h@{Functions.h}!blinkDebugLED@{blinkDebugLED}}
+\index{blinkDebugLED@{blinkDebugLED}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{blinkDebugLED()}{blinkDebugLED()}}
+{\footnotesize\ttfamily void blink\+Debug\+L\+ED (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+when called it blinks the debug L\+ED on the board. 
+
+\mbox{\Hypertarget{_functions_8h_ae66b8428977a138506d3c079a1b7b039}\label{_functions_8h_ae66b8428977a138506d3c079a1b7b039}} 
+\index{Functions.h@{Functions.h}!loadColor@{loadColor}}
+\index{loadColor@{loadColor}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{loadColor()}{loadColor()}}
+{\footnotesize\ttfamily byte load\+Color (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{chanel }\end{DoxyParamCaption})}
+
+
+
+load color chanel of a given switch 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the \mbox{\hyperlink{class_switch}{Switch}} object in its Array. {\bfseries{Not the L\+ED index {\bfseries{ }}}}\\
+\hline
+{\em chanel} & {\bfseries{{\bfseries{
+\begin{DoxyItemize}
+\item 0\+:=R chanel
+\item 1\+:=G chanel
+\item 2\+:=B chanel
+\end{DoxyItemize}}}}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{{\bfseries{ byte }}}}
+\end{DoxyReturn}
+\mbox{\Hypertarget{_functions_8h_a615faf85d13d549ae9bb515b4f8f2137}\label{_functions_8h_a615faf85d13d549ae9bb515b4f8f2137}} 
+\index{Functions.h@{Functions.h}!loadFromTeensy@{loadFromTeensy}}
+\index{loadFromTeensy@{loadFromTeensy}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{loadFromTeensy()}{loadFromTeensy()}}
+{\footnotesize\ttfamily bool load\+From\+Teensy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+loads presets datas from teensy 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]W\+R\+I\+TE T\+HE B\+L\+O\+O\+DY F\+U\+N\+C\+T\+I\+ON\end{DoxyRefDesc}
+\mbox{\Hypertarget{_functions_8h_a29fc023076efbd515a48067de95a5037}\label{_functions_8h_a29fc023076efbd515a48067de95a5037}} 
+\index{Functions.h@{Functions.h}!loadState@{loadState}}
+\index{loadState@{loadState}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{loadState()}{loadState()}}
+{\footnotesize\ttfamily bool load\+State (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+load state a given switch 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & of the \mbox{\hyperlink{class_switch}{Switch}} object in its Array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_functions_8h_a941e8c41fbc480b7dc46c2054a9513af}\label{_functions_8h_a941e8c41fbc480b7dc46c2054a9513af}} 
+\index{Functions.h@{Functions.h}!readEEPROM@{readEEPROM}}
+\index{readEEPROM@{readEEPROM}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{readEEPROM()}{readEEPROM()}}
+{\footnotesize\ttfamily byte read\+E\+E\+P\+R\+OM (\begin{DoxyParamCaption}\item[{int}]{deviceaddress,  }\item[{unsigned int}]{eeaddress }\end{DoxyParamCaption})}
+
+
+
+Read from the i2c memory chip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deviceaddress} & i2c address of the memory chip on the bus \\
+\hline
+{\em eeaddress} & Address of the byte you want to read inside the memory chip \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+byte Data returned as a byte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_functions_8h_a0651b9ce25e67a2e14c469eec5eeeed6}\label{_functions_8h_a0651b9ce25e67a2e14c469eec5eeeed6}} 
+\index{Functions.h@{Functions.h}!saveColor@{saveColor}}
+\index{saveColor@{saveColor}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{saveColor()}{saveColor()}}
+{\footnotesize\ttfamily void save\+Color (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{chanel,  }\item[{byte}]{component }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the \mbox{\hyperlink{class_switch}{Switch}} object in its Array. \\
+\hline
+{\em chanel} & 
+\begin{DoxyItemize}
+\item 0\+:=R chanel
+\item 1\+:=G chanel
+\item 2\+:=B chanel
+\end{DoxyItemize}\\
+\hline
+{\em color} & value of the component \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_functions_8h_aa863de5ae285cdc1d2a3bcc8fb1c1c57}\label{_functions_8h_aa863de5ae285cdc1d2a3bcc8fb1c1c57}} 
+\index{Functions.h@{Functions.h}!saveState@{saveState}}
+\index{saveState@{saveState}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{saveState()}{saveState()}}
+{\footnotesize\ttfamily void save\+State (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+save the state of a given switch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the \mbox{\hyperlink{class_switch}{Switch}} object in its Array. \\
+\hline
+{\em state} & true \+: switch is engaged. false \+: switch isnt engaged \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_functions_8h_a125db2763fd413e2bca5005727294259}\label{_functions_8h_a125db2763fd413e2bca5005727294259}} 
+\index{Functions.h@{Functions.h}!updateFSWboard@{updateFSWboard}}
+\index{updateFSWboard@{updateFSWboard}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{updateFSWboard()}{updateFSWboard()}}
+{\footnotesize\ttfamily void update\+F\+S\+Wboard (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{bank,  }\item[{bool}]{pressed\+ButtonP,  }\item[{\mbox{\hyperlink{class_switch}{Switch}}}]{F\+S\+WP,  }\item[{Adafruit\+\_\+\+Neo\+Pixel}]{chain }\end{DoxyParamCaption})}
+
+
+
+check if a switch is pushed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & is the index of the switch being checked \\
+\hline
+{\em bank} & is an indication representing the array the switch belongs to \\
+\hline
+{\em pressed\+ButtonP} & interrupt flag \\
+\hline
+{\em F\+S\+WP} & \mbox{\hyperlink{class_switch}{Switch}} object \\
+\hline
+{\em chain} & Adafruit\+\_\+\+Neo\+Pixel object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_functions_8h_a8be69617ea64c242351a1cf3278d1474}\label{_functions_8h_a8be69617ea64c242351a1cf3278d1474}} 
+\index{Functions.h@{Functions.h}!writeEEPROM@{writeEEPROM}}
+\index{writeEEPROM@{writeEEPROM}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{writeEEPROM()}{writeEEPROM()}}
+{\footnotesize\ttfamily void write\+E\+E\+P\+R\+OM (\begin{DoxyParamCaption}\item[{int}]{deviceaddress,  }\item[{unsigned int}]{eeaddress,  }\item[{byte}]{data }\end{DoxyParamCaption})}
+
+
+
+Writing into the i2c memory chip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deviceaddress} & i2c address of the memory chip on the bus \\
+\hline
+{\em eeaddress} & Address of the byte you want to write inside the memory chip \\
+\hline
+{\em data} & byte Data you want to write \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_functions_8h_ad9d238d64ab9b6ebfcaae0c8a82770db}\label{_functions_8h_ad9d238d64ab9b6ebfcaae0c8a82770db}} 
+\index{Functions.h@{Functions.h}!writeTeensy@{writeTeensy}}
+\index{writeTeensy@{writeTeensy}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{writeTeensy()}{writeTeensy()}}
+{\footnotesize\ttfamily void write\+Teensy (\begin{DoxyParamCaption}\item[{int}]{btn\+ID,  }\item[{bool}]{btn\+State }\end{DoxyParamCaption})}
+

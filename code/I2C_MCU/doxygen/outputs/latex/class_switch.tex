@@ -1,0 +1,240 @@
+\hypertarget{class_switch}{}\doxysection{Switch Class Reference}
+\label{class_switch}\index{Switch@{Switch}}
+
+
+This class keeps the L\+ED color and the \mbox{\hyperlink{class_switch}{Switch}} states in the S\+R\+AM in a simple object. As result we get a clear and snappy code.  
+
+
+
+
+{\ttfamily \#include $<$Switch.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_switch_a2a0a05851022976baa37812fa4b07e86}{Switch}} (int Led\+IndexP)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_switch}{Switch}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_switch_a54db96db46113c6a4904553796d183ce}{Switch}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_switch}{Switch}} object with a L\+ED index of -\/1. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_switch_adeba49dbac7ef722d6f1331e11538934}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em return the state of the switch i.\+e. engaged or not \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_switch_a7b21efeed1c0937198ebf7feb2146ca1}{set\+State}} (bool new\+State)
+\begin{DoxyCompactList}\small\item\em Set the State object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_switch_a789f6beb0958ace7ef8a44f6f209e462}{invert\+State}} ()
+\begin{DoxyCompactList}\small\item\em Invert the State object. e.\+g. if it was true it becomes false. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_switch_ae53c8fcb9a4072f5040bb519de619d32}{get\+Red}} ()
+\begin{DoxyCompactList}\small\item\em Get the Red component of the associated rgb led. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_switch_a714f79c7d424a8581af9b849146663f3}{get\+Green}} ()
+\begin{DoxyCompactList}\small\item\em Get the Green component of the associated rgb led. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_switch_af8da6526933ebb0967b346721b32ddc5}{get\+Blue}} ()
+\begin{DoxyCompactList}\small\item\em Get the Blue component of the associated rgb led. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_switch_af30ea8e4ef86ce68c9144aef0757c133}{set\+Red}} (byte new\+Red)
+\begin{DoxyCompactList}\small\item\em Set the Red component of the associated rgb led. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_switch_a174e33192f29a18606577ab4f5f5b0e2}{set\+Green}} (byte new\+Green)
+\begin{DoxyCompactList}\small\item\em Set the Green component of the associated rgb led. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_switch_ac7c02a4ad35896b004c7f3e249e9e5db}{set\+Blue}} (byte new\+Blue)
+\begin{DoxyCompactList}\small\item\em Set the Blue component of the associated rgb led. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_switch_a14fa4bfe5b0cc9ce327724928cab66c2}{get\+L\+E\+D\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Get the index of the associated rgb led. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_switch_ad3a0cc543dfdd32f14594a551c8a5e01}{set\+L\+E\+D\+Index}} (byte L\+E\+D\+IndexP)
+\begin{DoxyCompactList}\small\item\em Set the index of the associated rgb led. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class keeps the L\+ED color and the \mbox{\hyperlink{class_switch}{Switch}} states in the S\+R\+AM in a simple object. As result we get a clear and snappy code. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_switch_a2a0a05851022976baa37812fa4b07e86}\label{class_switch_a2a0a05851022976baa37812fa4b07e86}} 
+\index{Switch@{Switch}!Switch@{Switch}}
+\index{Switch@{Switch}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{Switch()}{Switch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Switch\+::\+Switch (\begin{DoxyParamCaption}\item[{int}]{Led\+IndexP }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_switch}{Switch}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Led\+IndexP} & associate an rgb led to the freshly created \mbox{\hyperlink{class_switch}{Switch}} object \\
+\hline
+\end{DoxyParams}
+\mbox{\hyperlink{class_switch}{Switch}} constructor, init attributes and set the led ID.\mbox{\Hypertarget{class_switch_a54db96db46113c6a4904553796d183ce}\label{class_switch_a54db96db46113c6a4904553796d183ce}} 
+\index{Switch@{Switch}!Switch@{Switch}}
+\index{Switch@{Switch}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{Switch()}{Switch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Switch\+::\+Switch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_switch}{Switch}} object with a L\+ED index of -\/1. 
+
+\mbox{\hyperlink{class_switch}{Switch}} constructor, init attributes without associating an L\+ED.
+
+$<$ -\/1 value means \char`\"{}no associated L\+E\+D\char`\"{}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_switch_af8da6526933ebb0967b346721b32ddc5}\label{class_switch_af8da6526933ebb0967b346721b32ddc5}} 
+\index{Switch@{Switch}!getBlue@{getBlue}}
+\index{getBlue@{getBlue}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{getBlue()}{getBlue()}}
+{\footnotesize\ttfamily byte Switch\+::get\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Blue component of the associated rgb led. 
+
+\begin{DoxyReturn}{Returns}
+byte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_switch_a714f79c7d424a8581af9b849146663f3}\label{class_switch_a714f79c7d424a8581af9b849146663f3}} 
+\index{Switch@{Switch}!getGreen@{getGreen}}
+\index{getGreen@{getGreen}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{getGreen()}{getGreen()}}
+{\footnotesize\ttfamily byte Switch\+::get\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Green component of the associated rgb led. 
+
+\begin{DoxyReturn}{Returns}
+byte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_switch_a14fa4bfe5b0cc9ce327724928cab66c2}\label{class_switch_a14fa4bfe5b0cc9ce327724928cab66c2}} 
+\index{Switch@{Switch}!getLEDIndex@{getLEDIndex}}
+\index{getLEDIndex@{getLEDIndex}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{getLEDIndex()}{getLEDIndex()}}
+{\footnotesize\ttfamily byte Switch\+::get\+L\+E\+D\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the index of the associated rgb led. 
+
+\begin{DoxyReturn}{Returns}
+byte
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+if the return index is -\/1, the \mbox{\hyperlink{class_switch}{Switch}} objet has either not been initialised with the proper constructor {\bfseries{OR}} it is a virtual \mbox{\hyperlink{class_switch}{Switch}}. In fact the 8th channel of the shit register is used to check the presence of a F\+S\+Wboard. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_switch_ae53c8fcb9a4072f5040bb519de619d32}\label{class_switch_ae53c8fcb9a4072f5040bb519de619d32}} 
+\index{Switch@{Switch}!getRed@{getRed}}
+\index{getRed@{getRed}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{getRed()}{getRed()}}
+{\footnotesize\ttfamily byte Switch\+::get\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Red component of the associated rgb led. 
+
+\begin{DoxyReturn}{Returns}
+byte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_switch_adeba49dbac7ef722d6f1331e11538934}\label{class_switch_adeba49dbac7ef722d6f1331e11538934}} 
+\index{Switch@{Switch}!getState@{getState}}
+\index{getState@{getState}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily bool Switch\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return the state of the switch i.\+e. engaged or not 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_switch_a789f6beb0958ace7ef8a44f6f209e462}\label{class_switch_a789f6beb0958ace7ef8a44f6f209e462}} 
+\index{Switch@{Switch}!invertState@{invertState}}
+\index{invertState@{invertState}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{invertState()}{invertState()}}
+{\footnotesize\ttfamily void Switch\+::invert\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Invert the State object. e.\+g. if it was true it becomes false. 
+
+\mbox{\Hypertarget{class_switch_ac7c02a4ad35896b004c7f3e249e9e5db}\label{class_switch_ac7c02a4ad35896b004c7f3e249e9e5db}} 
+\index{Switch@{Switch}!setBlue@{setBlue}}
+\index{setBlue@{setBlue}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{setBlue()}{setBlue()}}
+{\footnotesize\ttfamily void Switch\+::set\+Blue (\begin{DoxyParamCaption}\item[{byte}]{new\+Blue }\end{DoxyParamCaption})}
+
+
+
+Set the Blue component of the associated rgb led. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Blue} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_switch_a174e33192f29a18606577ab4f5f5b0e2}\label{class_switch_a174e33192f29a18606577ab4f5f5b0e2}} 
+\index{Switch@{Switch}!setGreen@{setGreen}}
+\index{setGreen@{setGreen}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{setGreen()}{setGreen()}}
+{\footnotesize\ttfamily void Switch\+::set\+Green (\begin{DoxyParamCaption}\item[{byte}]{new\+Green }\end{DoxyParamCaption})}
+
+
+
+Set the Green component of the associated rgb led. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Green} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_switch_ad3a0cc543dfdd32f14594a551c8a5e01}\label{class_switch_ad3a0cc543dfdd32f14594a551c8a5e01}} 
+\index{Switch@{Switch}!setLEDIndex@{setLEDIndex}}
+\index{setLEDIndex@{setLEDIndex}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{setLEDIndex()}{setLEDIndex()}}
+{\footnotesize\ttfamily void Switch\+::set\+L\+E\+D\+Index (\begin{DoxyParamCaption}\item[{byte}]{L\+E\+D\+IndexP }\end{DoxyParamCaption})}
+
+
+
+Set the index of the associated rgb led. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+E\+D\+IndexP} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+L\+E\+DinxP is a byte, it can only go up to 255. You can change it to an int but be really carefull about R\+AM usage on M\+C\+Us like Atmega 328P with only 2kbyte of S\+R\+AM. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_switch_af30ea8e4ef86ce68c9144aef0757c133}\label{class_switch_af30ea8e4ef86ce68c9144aef0757c133}} 
+\index{Switch@{Switch}!setRed@{setRed}}
+\index{setRed@{setRed}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{setRed()}{setRed()}}
+{\footnotesize\ttfamily void Switch\+::set\+Red (\begin{DoxyParamCaption}\item[{byte}]{new\+Red }\end{DoxyParamCaption})}
+
+
+
+Set the Red component of the associated rgb led. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Red} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_switch_a7b21efeed1c0937198ebf7feb2146ca1}\label{class_switch_a7b21efeed1c0937198ebf7feb2146ca1}} 
+\index{Switch@{Switch}!setState@{setState}}
+\index{setState@{setState}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Switch\+::set\+State (\begin{DoxyParamCaption}\item[{bool}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Set the State object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Pierre Paque/\+Documents/\+Arduino/\+U\+Mons\+\_\+arduino\+\_\+custom/\mbox{\hyperlink{_switch_8h}{Switch.\+h}}\item 
+C\+:/\+Users/\+Pierre Paque/\+Documents/\+Arduino/\+U\+Mons\+\_\+arduino\+\_\+custom/\mbox{\hyperlink{_switch_8cpp}{Switch.\+cpp}}\end{DoxyCompactItemize}

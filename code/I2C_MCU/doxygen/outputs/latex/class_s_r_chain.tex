@@ -1,0 +1,140 @@
+\hypertarget{class_s_r_chain}{}\doxysection{S\+R\+Chain Class Reference}
+\label{class_s_r_chain}\index{SRChain@{SRChain}}
+
+
+{\ttfamily \#include $<$S\+R\+Chain.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_r_chain_a84c8a76a9c6686ca85936860ca0d24df}{S\+R\+Chain}} (byte clkP, byte latP, byte datP, byte return\+SigP, int nb\+S\+RP)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_r_chain_ad946e38ceab60e6531d6ab5e234a2204}{begin}} ()
+\item 
+void \mbox{\hyperlink{class_s_r_chain_a2458a503e45fbeb6028d54a09d0e5e3f}{turn\+Off}} ()
+\begin{DoxyCompactList}\small\item\em turn all off \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_r_chain_a867d1ec6b028ca92859720ecc3120153}{turn\+On}} (int i)
+\begin{DoxyCompactList}\small\item\em turn on the given pin \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_r_chain_a6e0735429deb58be763f0af02555dc66}{ping}} ()
+\begin{DoxyCompactList}\small\item\em check presence of boards \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_r_chain_a7ad1689343ea6619b10b0c498f7178d5}{scan}} ()
+\item 
+void \mbox{\hyperlink{class_s_r_chain_afb5e88d982074713f26e2e53a35acc49}{set\+S\+R\+State}} (int i, bool stateP)
+\begin{DoxyCompactList}\small\item\em scan the switchs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_r_chain_a1df08f46eb5767c85ab887ad28137487}{load\+Datas}} ()
+\item 
+\mbox{\hyperlink{class_switch}{Switch}} \& \mbox{\hyperlink{class_s_r_chain_a529b94417d8eb9acdeb52267dfa8dd44}{get\+Switch}} (int i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_r_chain_a84c8a76a9c6686ca85936860ca0d24df}\label{class_s_r_chain_a84c8a76a9c6686ca85936860ca0d24df}} 
+\index{SRChain@{SRChain}!SRChain@{SRChain}}
+\index{SRChain@{SRChain}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{SRChain()}{SRChain()}}
+{\footnotesize\ttfamily S\+R\+Chain\+::\+S\+R\+Chain (\begin{DoxyParamCaption}\item[{byte}]{clkP,  }\item[{byte}]{latP,  }\item[{byte}]{datP,  }\item[{byte}]{return\+SigP,  }\item[{int}]{nb\+S\+RP }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+constructor of the class. init the attributes
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_r_chain_ad946e38ceab60e6531d6ab5e234a2204}\label{class_s_r_chain_ad946e38ceab60e6531d6ab5e234a2204}} 
+\index{SRChain@{SRChain}!begin@{begin}}
+\index{begin@{begin}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void S\+R\+Chain\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+set all shift registers output to 0. init the array of \mbox{\hyperlink{class_switch}{Switch}} object.\mbox{\Hypertarget{class_s_r_chain_a529b94417d8eb9acdeb52267dfa8dd44}\label{class_s_r_chain_a529b94417d8eb9acdeb52267dfa8dd44}} 
+\index{SRChain@{SRChain}!getSwitch@{getSwitch}}
+\index{getSwitch@{getSwitch}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{getSwitch()}{getSwitch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_switch}{Switch}} \& S\+R\+Chain\+::get\+Switch (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+returns the reference (pointer) to the i-\/th switch of the \mbox{\hyperlink{class_switch}{Switch}} array attribute. \begin{DoxyWarning}{Warning}
+dont modify this function to return a simple \mbox{\hyperlink{class_switch}{Switch}} object. you will get a copy of the object. you need reference.
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_s_r_chain_a1df08f46eb5767c85ab887ad28137487}\label{class_s_r_chain_a1df08f46eb5767c85ab887ad28137487}} 
+\index{SRChain@{SRChain}!loadDatas@{loadDatas}}
+\index{loadDatas@{loadDatas}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{loadDatas()}{loadDatas()}}
+{\footnotesize\ttfamily void S\+R\+Chain\+::load\+Datas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+loads the state of the switchs and their associated led colors from the i2c memory chip.\mbox{\Hypertarget{class_s_r_chain_a6e0735429deb58be763f0af02555dc66}\label{class_s_r_chain_a6e0735429deb58be763f0af02555dc66}} 
+\index{SRChain@{SRChain}!ping@{ping}}
+\index{ping@{ping}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily bool S\+R\+Chain\+::ping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check presence of boards 
+
+$<$ for i = 0 \+: (((0+1)$\ast$8)-\/1) = 8-\/1 = 7; for i = 1 \+: 16-\/1 = 15 and so on.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]return int instead of bool to know where the chain in corrupted\end{DoxyRefDesc}
+\mbox{\Hypertarget{class_s_r_chain_a7ad1689343ea6619b10b0c498f7178d5}\label{class_s_r_chain_a7ad1689343ea6619b10b0c498f7178d5}} 
+\index{SRChain@{SRChain}!scan@{scan}}
+\index{scan@{scan}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{scan()}{scan()}}
+{\footnotesize\ttfamily int S\+R\+Chain\+::scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+make the SR sequence to send pulses inside switches and return wich switch has been pushed
+
+$<$default value
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]mettre le 8 en define\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+$<$if the signal is low =$>$ !(low) = true, it means the ith switch is pressed down
+
+$<$no switch pushed down\mbox{\Hypertarget{class_s_r_chain_afb5e88d982074713f26e2e53a35acc49}\label{class_s_r_chain_afb5e88d982074713f26e2e53a35acc49}} 
+\index{SRChain@{SRChain}!setSRState@{setSRState}}
+\index{setSRState@{setSRState}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{setSRState()}{setSRState()}}
+{\footnotesize\ttfamily void S\+R\+Chain\+::set\+S\+R\+State (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{bool}]{stateP }\end{DoxyParamCaption})}
+
+
+
+scan the switchs 
+
+sets the i-\/th of the \mbox{\hyperlink{class_switch}{Switch}} array attribute to true or false state.\mbox{\Hypertarget{class_s_r_chain_a2458a503e45fbeb6028d54a09d0e5e3f}\label{class_s_r_chain_a2458a503e45fbeb6028d54a09d0e5e3f}} 
+\index{SRChain@{SRChain}!turnOff@{turnOff}}
+\index{turnOff@{turnOff}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{turnOff()}{turnOff()}}
+{\footnotesize\ttfamily void S\+R\+Chain\+::turn\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+turn all off 
+
+sets all Shift Registers output to low\mbox{\Hypertarget{class_s_r_chain_a867d1ec6b028ca92859720ecc3120153}\label{class_s_r_chain_a867d1ec6b028ca92859720ecc3120153}} 
+\index{SRChain@{SRChain}!turnOn@{turnOn}}
+\index{turnOn@{turnOn}!SRChain@{SRChain}}
+\doxysubsubsection{\texorpdfstring{turnOn()}{turnOn()}}
+{\footnotesize\ttfamily void S\+R\+Chain\+::turn\+On (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+turn on the given pin 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]rename in S\+R\+\_\+something \end{DoxyRefDesc}
+sets the i-\/th Shift Registers output to H\+I\+GH \begin{DoxyNote}{Note}
+this function is specifically designed to only allow one pin high at the time. This avoids hazard leading to potential IC destructions.
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Pierre Paque/\+Documents/\+Arduino/\+U\+Mons\+\_\+arduino\+\_\+custom/\mbox{\hyperlink{_s_r_chain_8h}{S\+R\+Chain.\+h}}\item 
+C\+:/\+Users/\+Pierre Paque/\+Documents/\+Arduino/\+U\+Mons\+\_\+arduino\+\_\+custom/\mbox{\hyperlink{_s_r_chain_8cpp}{S\+R\+Chain.\+cpp}}\end{DoxyCompactItemize}
