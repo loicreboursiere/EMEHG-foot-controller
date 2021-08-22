@@ -8,27 +8,27 @@ class SRChain
 {
 
   public : 
-    SRChain(byte clkP, byte latP, byte datP, byte returnSigP, int nbSRP);///<constructor
+    SRChain( byte clkP, byte latP, byte datP, byte returnSigP, int nbSRP );///<constructor
 
     void begin();
     
     void turnOff(); ///<turn all off
-    void turnOn(int i); ///< turn on the given pin @todo rename in SR_something
+    void turnOn( int i ); ///< turn on the given pin @todo rename in SR_something
         
     
     bool ping(); ///<check presence of boards
     int scan(); ///scan the switchs 
 
-    void setSRState(int i, bool stateP);
+    void setSRState( int i, bool stateP );
     
-    void loadDatas();
+    void loadData();
 
-    Switch & getSwitch(int i);
+    Switch & getSwitch( int i );
 
 
   private :
   
-    Switch* FSArray; ///<Switch pointer, useful to create an array when constructor being called
+    Switch * FSArray; ///<Switch pointer, useful to create an array when constructor being called
     byte clk; ///<clock pin
     byte lat; ///<latch pin
     byte dat; ///<data pin

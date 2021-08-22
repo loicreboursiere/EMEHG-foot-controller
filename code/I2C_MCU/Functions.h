@@ -22,9 +22,9 @@
  * @param eeaddress Address of the byte you want to write inside the memory chip
  * @param data byte Data you want to write
  */
-void writeEEPROM(int deviceaddress, unsigned int eeaddress, byte data );
+void writeEEPROM( int deviceaddress, unsigned int eeaddress, byte data );
 
-void writeTeensy(int btnID,bool btnState);
+void writeTeensy( int btnID, bool btnState );
 
 /**
  * @brief Read from the i2c memory chip
@@ -33,7 +33,7 @@ void writeTeensy(int btnID,bool btnState);
  * @param eeaddress Address of the byte you want to read inside the memory chip
  * @return byte Data returned as a byte
  */
-byte readEEPROM(int deviceaddress, unsigned int eeaddress );
+byte readEEPROM( int deviceaddress, unsigned int eeaddress );
 
 
 /**
@@ -45,7 +45,7 @@ byte readEEPROM(int deviceaddress, unsigned int eeaddress );
  * @param FSWP Switch object
  * @param chain Adafruit_NeoPixel object.
  */
-void updateFSWboard(int index, int bank, bool pressedButtonP, Switch FSWP, Adafruit_NeoPixel chain);
+void updateFSWboard( int index, int bank, bool pressedButtonP, Switch FSWP, Adafruit_NeoPixel chain );
 
 /**
  * @brief load state a given switch
@@ -54,7 +54,7 @@ void updateFSWboard(int index, int bank, bool pressedButtonP, Switch FSWP, Adafr
  * @return true 
  * @return false 
  */
-bool loadState(int  index);
+bool loadState( int  index );
 
 /**
  * @brief load color chanel of a given switch
@@ -63,7 +63,7 @@ bool loadState(int  index);
  * @param chanel <ul><li>0:=R chanel</li><li>1:=G chanel</li><li>2:=B chanel</li></ul>
  * @return byte 
  */
-byte loadColor(int index, int chanel);
+byte loadColor( int index, int chanel );
 
 /**
  * @brief save the state of a given switch.
@@ -72,7 +72,7 @@ byte loadColor(int index, int chanel);
  * @param state true : switch is engaged. false : switch isnt engaged
  * 
  */
-void saveState(int  index, bool state);
+void saveState( int  index, bool state );
 
 /**
  * @brief 
@@ -81,7 +81,7 @@ void saveState(int  index, bool state);
  * @param chanel <ul><li>0:=R chanel</li><li>1:=G chanel</li><li>2:=B chanel</li></ul>
  * @param color value of the component
  */
-void saveColor(int index, int chanel, byte component);
+void saveColor( int index, int chanel, byte component );
 
 /**
  * @brief when called it blinks the debug LED on the board.

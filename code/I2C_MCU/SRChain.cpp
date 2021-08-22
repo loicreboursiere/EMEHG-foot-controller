@@ -2,7 +2,7 @@
 #include "Switch.h"
 #include "Functions.h"
 
-SRChain::SRChain(byte clkP, byte latP, byte datP, byte returnSigP, int nbSRP){
+SRChain::SRChain( byte clkP, byte latP, byte datP, byte returnSigP, int nbSRP ){
 
     /**
      * @brief constructor of the class. init the attributes
@@ -17,15 +17,15 @@ SRChain::SRChain(byte clkP, byte latP, byte datP, byte returnSigP, int nbSRP){
     this->returnSig = returnSigP;
 
     this->FSArray = 0;
-    this->FSArray = new Switch[this->nbSR*8];
+    this->FSArray = new Switch[ this->nbSR * 8 ];
 
-    pinMode(this->clk, OUTPUT);
-    pinMode(this->lat, OUTPUT);
-    pinMode(this->dat, OUTPUT);
-    pinMode(this->returnSig, INPUT);
+    pinMode( this->clk, OUTPUT );
+    pinMode( this->lat, OUTPUT );
+    pinMode( this->dat, OUTPUT );
+    pinMode( this->returnSig, INPUT );
 
-    digitalWrite(this->clk,LOW);
-    digitalWrite(this->lat,LOW); 
+    digitalWrite( this->clk,LOW );
+    digitalWrite( this->lat,LOW ); 
 }
 
 
@@ -38,13 +38,15 @@ void SRChain::begin(){
     this->turnOff();
 
     int index = 0;
-    for(int i = 0; i < (8*this->nbSR); i++){
-        if((i+1)%8 !=0){//skips the n*8th switch.. these are virtual switchs used to keep track of FSW Board responsiveness.
-            this->FSArray[i].setLEDIndex((byte)index);
-            this->FSArray[i].setState(loadState(index));
-            this->FSArray[i].setRed(loadColor(index,0));
-            this->FSArray[i].setGreen(loadColor(index,1));
-            this->FSArray[i].setBlue(loadColor(index,2));
+    for(int i = 0; i < ( 8 * this->nbSR ); i++ )
+    {
+        if( ( i + 1 ) % 8 != 0 ) //skips the n*8th switch.. these are virtual switchs used to keep track of FSW Board responsiveness.
+        {
+            this->FSArray[ i ].setLEDIndex( ( byte ) index );
+            this->FSArray[ i ].setState( loadState( index ) );
+            this->FSArray[ i ].setRed( loadColor( index, 0 ) );
+            this->FSArray[ i ].setGreen( loadColor( index, 1 ) );
+            this->FSArray[ i ].setBlue( loadColor( index, 2 ) );
             index++;
         }
     }
@@ -57,19 +59,20 @@ void SRChain::turnOff(){
    * 
    */
 
-  digitalWrite(this->dat,LOW);
+  digitalWrite( this->dat , LOW );
 
-  for(int i = 0; i<8*this->nbSR; i++){
-    digitalWrite(this->clk,HIGH);
-    digitalWrite(this->clk,LOW);
+  for( int i = 0; i < 8 * this->nbSR; i++ )
+  {
+    digitalWrite( this->clk, HIGH );
+    digitalWrite( this->clk, LOW );
   }
-  digitalWrite(this->lat,HIGH);
-  digitalWrite(this->lat,LOW);
+  digitalWrite( this->lat,HIGH );
+  digitalWrite( this->lat,LOW );
 
 }
 
 
-void SRChain::turnOn(int iP){
+void SRChain::turnOn( int iP ){
 
   /**
    * @brief sets the i-th Shift Registers output to HIGH
@@ -77,29 +80,31 @@ void SRChain::turnOn(int iP){
    * 
    */
 
-  digitalWrite(this->dat,HIGH);
+  digitalWrite( this->dat, HIGH );
   
-  digitalWrite(this->clk,HIGH);
-  digitalWrite(this->clk,LOW);
+  digitalWrite( this->clk, HIGH );
+  digitalWrite( this->clk, LOW );
 
-  digitalWrite(this->dat,LOW);
+  digitalWrite( this->dat, LOW );
   
-  for(int i =0; i<iP;i++){
-  digitalWrite(this->clk,HIGH);
-  digitalWrite(this->clk,LOW);
+  for( int i = 0; i < iP; i++ ){
+  digitalWrite( this->clk, HIGH );
+  digitalWrite( this->clk, LOW );
   }
   
-  digitalWrite(this->lat,HIGH);
-  digitalWrite(this->lat,LOW);
+  digitalWrite( this->lat, HIGH );
+  digitalWrite( this->lat, LOW );
 }
 
 
-bool SRChain::ping(){
+bool SRChain::ping()
+{
 
   this->turnOff();
-  for(int i = 0; i<this->nbSR;i++){
-    this->turnOn((((i+1)*8)-1)); ///< for i = 0 :  (((0+1)*8)-1) = 8-1 = 7; for i = 1 : 16-1 = 15 and so on.
-    delay(1);
+  for( int i = 0; i < this->nbSR; i++ )
+  {
+    this->turnOn( ( ( ( i + 1 ) * 8 ) - 1 ) ); ///< for i = 0 :  (((0+1)*8)-1) = 8-1 = 7; for i = 1 : 16-1 = 15 and so on.
+    delay( 1 );
     /*if(!digitalRead(this->returnSig)){ ///<if the signal is low => !(low) = true, then we return false. As the ((n*8)-1)th chanel should always be <b>HIGH</b>.
       return false;
     }*/
@@ -130,14 +135,17 @@ int SRChain::scan(){
  * @param i 
  */
 
-  for(int i = 0; i<this->nbSR*8;i++){
-    this->turnOn(i); 
+  for( int i = 0; i < this->nbSR * 8; i++ )
+  {
+    this->turnOn( i ); 
     //delay(200);    
-   if(digitalRead(this->returnSig)){ ///<if the signal is low => !(low) = true, it means the ith switch is pressed down
+   if( digitalRead( this->returnSig ) ) ///<if the signal is low => !(low) = true, it means the ith switch is pressed down
+   { 
 
-      if(!((i+1)%8)){
-        Serial.println(i/8);
-        Serial.println("board not dead !");
+      if( ! ( ( i + 1 ) % 8 ) ) 
+      {
+        Serial.println( i / 8 );
+        Serial.println( "board not dead !" );
         
       }else{
         pushedButton = i; //return pushed down switch.
@@ -151,35 +159,37 @@ int SRChain::scan(){
 }
 
 
-Switch & SRChain::getSwitch(int i){
+Switch & SRChain::getSwitch( int i ) {
 
   /**
    * @brief returns the reference (pointer) to the i-th switch of the Switch array attribute.
    * @warning dont modify this function to return a simple Switch object. you will get a copy of the object. you need reference.
    * 
    */
-    return this->FSArray[i];
+    return this->FSArray[ i ];
 }
 
-void SRChain::setSRState(int i, bool stateP){
+void SRChain::setSRState( int i, bool stateP )
+{
 
   /**
    * @brief sets the i-th of the Switch array attribute to true or false state.
    * 
    */
-  this->FSArray[i].setState(stateP);
+  this->FSArray[ i ].setState( stateP );
 
 }
 
-void SRChain::loadDatas(){
+void SRChain::loadData(){
   /**
    * @brief loads the state of the switchs and their associated led colors from the i2c memory chip.
    * 
    */
-  for(int i = 0; i<nbSR*8; i++){  
-      this->getSwitch(i).setState(loadState(i)); 
-      this->getSwitch(i).setRed(loadColor(i,0));
-      this->getSwitch(i).setGreen(loadColor(i,1));
-      this->getSwitch(i).setBlue(loadColor(i,2));
+  for( int i = 0; i < nbSR * 8; i++ )
+  {  
+      this->getSwitch( i ).setState( loadState( i ) ); 
+      this->getSwitch( i ).setRed( loadColor( i, 0 ) );
+      this->getSwitch( i ).setGreen( loadColor( i, 1 ) );
+      this->getSwitch( i ).setBlue( loadColor( i, 2 ) );
     }
 }
